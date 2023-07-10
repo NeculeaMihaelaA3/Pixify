@@ -1,0 +1,16 @@
+<app-header style="width: 100%;"> </app-header>
+
+<ng-container *ngIf="isHomePage()">
+  <div id="backgound">
+    <div class="container">
+      <div class="text">
+        <p id="first"> Hi! We are</p>
+        <h1> Pixify</h1>
+        <p> With our app, you can extract metadata from your images and add fun filters to create stunning visual effects.</p>
+      </div>
+    </div>
+  </div>
+</ng-container>
+<!-- <app-home></app-home> -->
+
+<router-outlet></router-outlet>

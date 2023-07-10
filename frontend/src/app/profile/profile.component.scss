@@ -1,0 +1,261 @@
+$pink:#944771; 
+
+body {
+    background: rgb(99, 39, 120);
+}
+
+.container{
+    margin-top: 5%;
+    margin: 0 auto;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile{
+    width: 140px;
+    position: relative;
+    margin-left: 5px;
+    margin-bottom: 40px;
+    margin-top: 90px;
+}
+
+.picture{
+    border-radius: 40%;
+}
+
+#gender{
+    width: 100px;
+}
+
+#upload{
+    border: none;
+    position: absolute;
+    top: 78%;
+    left: 65%;
+    border-radius: 50%;
+    width: 56px;
+    background: transparent;
+}
+
+.form-control{
+    height: 40px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 7px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+    margin-top: 1px;
+}
+
+.title{
+    font-size: 25px;
+    font-weight: 500;
+    color: $pink; 
+    font-family: 'Rouge Script', cursive; 
+    position: absolute;
+    top: 130px;
+    padding-right: 30px;
+    z-index: 99999;
+}
+
+.svg{
+    margin-top: 170px;
+    margin-left: 40px;
+    margin-bottom: 35px;
+    background-color: white;
+    position: absolute;
+}
+
+.info{
+    // margin: 0 auto;
+    margin-top: 100px;
+    width: 85%;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    margin-left: 50%;
+}
+
+.row{
+    margin: auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn{
+    margin-top: 15px;
+    background-color: #944771;
+    color: white;
+    padding: 14px 20px;
+    // margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.btn:hover{
+    background-color: black;
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 15px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+}
+
+@media(max-width: 400px){
+
+    .form-control{
+        height: 27px;
+    }
+
+    .col-md-5 {
+      overflow-y: scroll;
+      height: 40%;
+    }
+
+    .profile{
+        width: 20%;
+    }
+    
+    #svg{
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media(max-width: 985px){
+    .row{
+        // margin-left: 10%;
+        // margin-top:10%;
+        height: calc(100% - 80px);
+    }
+
+    .profile{
+        width: 80px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+        margin-left: 0px;
+    }
+
+    .picture{
+        margin-bottom: 0px;
+    }
+
+    .info {
+        overflow-y: auto;
+        height: 100vh;
+        margin-top: 0px;
+        margin: auto auto;
+    }
+}
+
+@media(max-width: 700px){
+
+    .svg, .title{
+        display: none;
+    }
+}
+
+@media(max-width: 700px){
+    .row{
+        // margin-left: 10%;
+        // margin-top:10%;
+        margin:auto auto;
+        margin-top: 50px;
+        
+    }
+
+    .profile{
+        // width: 160px;
+        // margin-top: 90px;
+        display: none;
+    }
+
+    .info {
+        overflow-y: none;
+        height: calc(100% - 200px);
+    }
+}
+
+
+@media(max-width: 414px){
+
+    .info {
+      overflow-y: auto;
+      height: calc(100% - 200px);
+      margin-bottom: -100px;
+      margin-top: 30px;
+    //   .mt-3{
+    //     overflow-y: auto;
+    //   }
+    }
+
+    // .profile{
+    //     width: 20%;
+    //     margin-top: 50px;
+    // }
+    
+    .btn{
+        position: absolute;
+        left: 85px;
+    }
+
+    #birthdate{
+        width: calc(100% + 90px);
+        position: relative;
+        margin-left: -47px;
+    }
+
+    #birth{
+        margin-left: -40px;
+    }
+
+}
+
+@media(max-width: 360px){
+
+    .info {
+      overflow-y: auto;
+      height: calc(100% - 200px);
+      margin-bottom: -100px;
+      margin-top: 30px;
+    }
+    .row{
+        overflow-y: auto;
+    }
+    
+    .btn{
+        position: absolute;
+        left: 67px;
+        margin-bottom: 20px;
+    }
+
+    #birthdate{
+        width: calc(100% + 90px);
+        position: relative;
+        margin-left: -47px;
+    }
+
+    #birth{
+        margin-left: -40px;
+    }
+}

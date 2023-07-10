@@ -1,0 +1,21 @@
+<div class="header">
+    <nav>
+        <div class = "menu">
+            <button mat-button [matMenuTriggerFor]="menu" id ="check" class="checkbtn">Menu</button>
+            <mat-menu #menu="matMenu" class="menu">
+                <button mat-menu-item *ngIf="!isUserLogged()" [routerLink]="['/login']">Login</button>
+                <button mat-menu-item *ngIf="isUserLogged()" [routerLink]="['/editing']"> Actions </button>
+                <button mat-menu-item *ngIf="isUserLogged()" [routerLink]="['/login']" (click)="onLogout()">Logout</button>
+                <button mat-menu-item *ngIf="isUserLogged() && !isUserOnProfile()" (click)="onProfile()">Profile</button>
+            </mat-menu>
+        </div>
+        <label class="logo" (click)="toHome()"> Pixify </label>
+        <ul>
+            <li><a *ngIf="isUserLogged()" [routerLink]="['/editing']"> Actions</a></li>
+            <li><a *ngIf="isUserLogged() && !isUserOnProfile()" (click)="onProfile()">Profile</a></li>
+            <li><a *ngIf="!isUserLogged()" [routerLink]="['/login']">Login</a></li>
+            <li><a *ngIf="isUserLogged()" [routerLink]="['/login']" (click)="onLogout()">Logout</a></li>
+        </ul>
+    </nav>
+</div>
+<router-outlet></router-outlet>

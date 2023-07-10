@@ -1,0 +1,24 @@
+
+
+<div class="container centered-content">
+    <h1 id="title">Login In To Your Account!</h1>
+    <label for="uname" id="ulabel"> Username </label>
+    <br>
+    <form>
+    <input type="text" placeholder="Enter Username" name="username" autocomplete="given-username" [(ngModel)] = "username" required>
+    </form>
+    <br>
+    <label for="psw" id="plabel"> Password </label>
+    <br>
+    <form>
+    <input type="password" placeholder="Enter Password" name="password" autocomplete="given-password" [(ngModel)] = "password" required>
+    </form>
+    <br>
+    <br>
+    <span style="color:red" class ="errormessage" *ngIf="isVisible"> {{errormessage}}</span>
+    <br>
+    <button type="button" (click)="onSubmit()"> Login </button>
+    <br>
+    <a [routerLink]="['/registration']" routerLinkActive="active"> Don't have an account</a>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,45 @@
+.container {
+    margin: 0px;
+    padding: 0px;
+    margin: auto auto;
+    width: calc(100% - 160px);
+    margin-top: 50px;
+    overflow-y: none;
+    margin-bottom: 20px;
+}
+
+
+.form{
+    margin-top: 0px;
+    margin-left: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    h1 {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 3rem; //1 rem = 16 pixels
+        font-weight: 600;
+        background-image: linear-gradient(to left, #553c9a, #b393d3);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        position: center;
+    }
+
+    #btn {
+        margin-top: 10px;
+        background-color: white;
+        border: none;
+    }
+
+    #canvas{
+        margin: auto auto;
+        margin-top: -45px;
+        margin-bottom: 1px;
+    }
+
+    #spinner{
+        margin-top: -35px;
+    }
+}

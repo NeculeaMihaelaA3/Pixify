@@ -1,0 +1,142 @@
+
+.container{   
+    margin: 0px;
+    padding: 0px;
+    margin: auto auto;
+    margin-top: 90px;
+}
+
+#hidden{
+    display: none;
+}
+
+.form{
+    margin-left: auto;
+    margin-right: auto;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    position: center;
+    h1{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 20px;
+        font-size: 3rem; //1 rem = 16 pixels
+        font-weight: 600;
+        background-image: linear-gradient(to left, #553c9a, #b393d3);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        position: center;
+    }
+
+    span{
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    p{
+        font-size: 16px;
+        color: black;
+        font-family: 'Times New Roman', Times, serif;
+        margin: auto auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        width: 600px; 
+        height: 60px;
+    }
+
+    #btn{
+        margin-top: 10px;
+        background-color: white;
+        border: none;
+    }
+
+    .input{
+        width: 185px;
+        height: 35px;
+        margin-left: auto;
+        margin-right: auto;
+        position: center;
+        margin-top: 20px;
+        border: 2px solid purple;
+        border-radius: 7px;
+    }
+    margin-left: 10%;
+    
+}
+
+.section{
+    margin-left: 150px;
+}
+
+.photos{ 
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px; 
+
+    #spinner {
+        margin: auto auto;
+        position: center;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container{
+        width: calc(100% - 70px);
+    }
+
+    .form{
+        margin-left: calc(100% - (100% - 80px));
+    }
+    
+
+
+    .photos{
+        display: none;
+    }
+
+    #hidden{
+        display: grid;
+        width: calc(100% - 80px); 
+        margin-left: auto;
+        margin-right: auto;
+        position: center;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p{
+        width: 100%;
+    }
+}
+  
+
+@media screen and (max-width: 480px) {
+    .form{
+        h1 {
+            font-size: 16px;
+            margin-left: 30px;
+          }
+    }
+    
+
+    .photos{
+        display: none;
+    }
+
+    .hidden{
+        display: block;
+    }
+
+}
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+.container {
+    // margin-left: 200px;
+    margin: 0px;
+    padding: 0px;
+    margin: auto auto;
+    margin-top: 90px;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#hidden {
+    display: none;
+}
+
+.form {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    position: center;
+    h1 {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 3rem; //1 rem = 16 pixels
+        font-weight: 600;
+        background-image: linear-gradient(to left, #553c9a, #b393d3);
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        position: center;
+    }
+
+    span {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #btn {
+        // margin-top: 40px;
+        background-color: white;
+        border: none;
+    }
+
+    .input {
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+        position: center;
+        margin-top: 20px;
+    }
+    margin-left: 10%;
+}
+
+.section {
+    margin-left: 200px;
+}
+
+.photos {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+
+    #spinner {
+        margin: auto auto;
+        position: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: calc(100% - 70px);
+    }
+
+    .form {
+        margin-left: calc(100% - (100% - 100px));
+
+        #btn {
+            margin-top: 10%;
+            svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+
+    .photos {
+        display: none;
+    }
+
+    #hidden {
+        display: grid;
+        width: calc(100% - 80px);
+        margin-left: auto;
+        margin-right: auto;
+        position: center;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 10px;
+    }
+
+    #title1 {
+        font-size: 18px;
+    }
+
+    #title2 {
+        font-size: 18px;
+        margin-top: -24px;
+    }
+
+    .photos {
+        display: none;
+    }
+
+    .hidden {
+        display: block;
+    }
+
+    .form {
+        #btn {
+            margin-top: 10%;
+            svg {
+                width: 50px;
+                height: 50px;
+            }
+        }
+    }
+}

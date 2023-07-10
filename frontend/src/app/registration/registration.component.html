@@ -1,0 +1,49 @@
+<div class="container centered-content">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form action="#" class="form">
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" placeholder="Enter your name" name="name" autocomplete="given-name" [(ngModel)]="name" required>
+            <span style="color:white" class ="errormessage" *ngIf="!visibleName"> {{ errName }} </span>
+            <span style="color:red" class ="errormessage" *ngIf="visibleName"> {{ errName }} </span>
+          </div>
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" placeholder="Enter your username" autocomplete="given-username" name="username" [(ngModel)]="username" required>
+            <span style="color:white" class ="errormessage" *ngIf="!visibleUsername"> {{errUsername}} </span> 
+            <span style="color:red" class ="errormessage" *ngIf="visibleUsername"> {{errUsername}} </span> 
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" placeholder="Enter your email" autocomplete="given-email" name="email" [(ngModel)]="email" required>
+            <span style="color:white" class ="errormessage" *ngIf="!visibleEmail"> {{errNumber}} </span>  
+            <span style="color:red" class ="errormessage" *ngIf="visibleEmail"> {{errEmail}} </span> 
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" placeholder="Enter your number" autocomplete="given-number" name="number" [(ngModel)]="number" required>
+            <span style="color:white" class ="errormessage" *ngIf="!visibleNumber"> {{errNumber}} </span>  
+            <span style="color:red" class ="errormessage" *ngIf="visibleNumber"> {{errNumber}} </span>  
+          </div>
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" placeholder="Enter your password"  autocomplete="given-password" name="password" [(ngModel)]="password" required>
+            <span style="color:white" class ="errormessage" *ngIf="!visiblePassword"> {{errPassword}} </span> 
+            <span style="color:red" class ="errormessage" *ngIf="visiblePassword"> {{errPassword}} </span> 
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" placeholder="Confirm your password" autocomplete="given-password" name="confirm" [(ngModel)]="confirm" required>
+            <span style="color:white" class ="errormessage" *ngIf="!visibleConfirmPass"> {{errConfirm}} </span> 
+            <span style="color:red" class ="errormessage" *ngIf="visibleConfirmPass"> {{errConfirm}} </span> 
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register" (click)="onRegister()">
+        </div>
+      </form>
+    </div>
+</div>
+<router-outlet></router-outlet>

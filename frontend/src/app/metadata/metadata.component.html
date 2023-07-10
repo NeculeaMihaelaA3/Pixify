@@ -1,0 +1,15 @@
+<app-sidebar (buttonClick)="onButtonClick($event)"></app-sidebar>
+
+<div class="container">
+    <h1> Extract Image Metadata</h1>
+    <button id="btn1" type="button" (click)="function()"> Upload a picture</button>
+    <br>
+    <span *ngIf="notImage" style="color:red" class ="errormessage"> {{ msg }}</span>
+    <br>
+    <img [src]="imageSrc" alt="your-image-description">
+    <input style="display:none" type="file" id="my-file" (change)="onFileSelected($event)"> 
+    <button id="btn" type="button" (click)="getMetadata()"> Get The Metadata</button>
+    <mat-spinner *ngIf="isVisible" [diameter]="65" id="spinner"></mat-spinner>
+    <textarea id="metadata" placeholder="Type your text here" readonly> {{ metadata }}</textarea>
+    <button (click)="copy()"> Copy </button>
+</div>    

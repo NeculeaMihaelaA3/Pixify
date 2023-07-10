@@ -1,0 +1,15 @@
+<app-sidebar></app-sidebar>
+<div class="container">
+  <div class="title">
+    <div class="text">
+      <h1>Put your creative</h1>
+      <h1>energy to work</h1>
+      <h1>with Pixify!</h1>
+    </div>
+  </div>
+
+  <img [src]="images[currentIndex]" id="mainImage">
+  <div id="thumbnails">
+    <img *ngFor="let img of thumbnails" [src]="img" class="thumbnail">
+  </div>
+</div>

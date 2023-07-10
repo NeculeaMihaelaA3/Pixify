@@ -1,0 +1,88 @@
+<app-sidebar> </app-sidebar>
+
+<div class="container">
+  <form enctype="multipart/form-data" class="form">
+    <h1>Online image converter!</h1>
+    <div class="row">
+      <input
+        style="display: none"
+        type="file"
+        id="my-file"
+        (change)="onFileSelected($event)"
+      />
+      <button id="btn" type="button" (click)="function()">
+        <svg
+          height="70px"
+          width="70px"
+          version="1.1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 290.625 290.625"
+          xml:space="preserve"
+        >
+          <g>
+            <g>
+              <polygon
+                style="fill: rgb(7, 7, 7)"
+                points="206.25,288.124 196.875,147.499 225,147.499 168.75,81.874 112.5,147.499 140.625,147.499 
+        131.25,288.124 		"
+              />
+              <path
+                style="fill: #070707"
+                d="M243.75,44.374V2.187H0v215.625c0,15.511,12.614,28.125,28.125,28.125h101.236l-2.794,41.878
+        l9.356,0.623l9.712-145.627h-22.95l46.064-53.733l46.059,53.733h-22.95l9.708,145.622l9.356-0.623l-2.784-41.873H262.5
+        c15.511,0,28.125-12.614,28.125-28.125V44.374H243.75z M9.375,217.812V11.562h225v32.813H129.459l-9.375-18.75H46.875v192.188
+        c0,10.341-8.409,18.75-18.75,18.75S9.375,228.152,9.375,217.812z M281.25,217.812c0,10.341-8.409,18.75-18.75,18.75h-54.989
+        l-5.625-84.375h33.3L168.75,74.669l-66.441,77.517h33.3l-5.625,84.375H49.031c4.472-4.983,7.219-11.541,7.219-18.75V34.999h58.041
+        l9.375,18.75H281.25V217.812z"
+              />
+            </g>
+          </g>
+        </svg>
+      </button>
+      <div class="convert">
+      <h4>Convert</h4>
+      <mat-form-field class="custom-mat-form-field">
+        <mat-label>your image format</mat-label>
+        <mat-select (selectionChange)="on_selection_format($event)">
+          <mat-option *ngFor="let type of types" [value]="type">
+            {{ type.value }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <h4>to</h4>
+      <mat-form-field class="custom-mat-form-field">
+        <mat-label>conversion</mat-label>
+        <mat-select (selectionChange)="on_selection_convert($event)">
+          <mat-option *ngFor="let type of types" [value]="type">
+            {{ type.value }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      </div> 
+    </div>
+    <br>
+    <span *ngIf="notImage" style="color:red" class ="errormessage"> {{ msg }}</span>
+    <br>
+    <mat-spinner *ngIf="isVisible" [diameter]="30" id="hidden"></mat-spinner>
+    <img [src]="resultImage" id="hidden" />
+  </form>
+  <div class="section">
+    <div class="photos">
+      <div class="photo-column">
+        <img [src]="imageSrc" id="img" />
+      </div>
+      <div class="photo-column">
+        <mat-spinner
+          *ngIf="isVisible"
+          [diameter]="50"
+          id="spinner"
+        ></mat-spinner>
+      </div>
+      <div class="photo-column">
+        <img [src]="resultImage" id="img" />
+      </div>
+    </div>
+  </div>
+</div>

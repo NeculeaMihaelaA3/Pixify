@@ -1,0 +1,71 @@
+
+<div class="container rounded bg-white mt-5 mb-5">
+    <div class="title">{{username}}'s profile</div>
+    <div class="svg">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100" height="100" viewBox="0 0 1080 1080" xml:space="preserve">
+            <desc>Created with Fabric.js 3.5.0</desc>
+            <defs>
+            </defs>
+            <rect x="0" y="0" width="100%" height="100%" fill="#ffffff"/>
+            <g transform="matrix(4.6095 0 0 4.6095 540.0027 540.0024)" id="600855">
+            <g style="" vector-effect="non-scaling-stroke">
+                    <g transform="matrix(0.9973 -0.0732 0.0732 0.9973 -12.6977 -11.7727)">
+            <rect style="stroke: rgb(0,0,0); stroke-width: 10; stroke-dasharray: none; stroke-linecap: square; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: #ffffff; fill-rule: nonzero; opacity: 1;" x="-82.76" y="-75" rx="0" ry="0" width="165.52" height="150"/>
+            </g>
+                    <g transform="matrix(1 0 0 1 -13.647 -24.6685)">
+            <linearGradient id="SVGID_3" gradientUnits="userSpaceOnUse" gradientTransform="matrix(0.9973 -0.0732 0.0732 0.9973 -98.7475 -66.3152)" x1="93.628" y1="24.229" x2="93.628" y2="122.5">
+            <stop offset="0%" style="stop-color:rgb(207, 111, 188);stop-opacity: 1"/>
+            <stop offset="100%" style="stop-color:rgb(156,38,131);stop-opacity: 1"/>
+            </linearGradient>
+            <polygon style="stroke: rgb(0,0,0); stroke-width: 5; stroke-dasharray: none; stroke-linecap: square; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: url(#SVGID_3); fill-rule: nonzero; opacity: 1;" points="73.238,43.8965 -66.044,54.1165 -73.238,-43.8945 66.048,-54.1165 "/>
+            </g>
+                    <g transform="matrix(1 0 0 1 17.765 17.659)">
+            <rect style="stroke: rgb(0,0,0); stroke-width: 10; stroke-dasharray: none; stroke-linecap: square; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" x="-82.76" y="-75" rx="0" ry="0" width="165.52" height="150"/>
+            </g>
+                    <g transform="matrix(1 0 0 1 17.765 4.7285)">
+            <linearGradient id="SVGID_4" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 1 -123.844 -102.7105)" x1="123.84" y1="53.573" x2="123.84" y2="151.85">
+            <stop offset="0%" style="stop-color:rgb(63, 197, 197);stop-opacity: 1"/>
+            <stop offset="100%" style="stop-color:rgb(49, 95, 156);stop-opacity: 1"/>
+            </linearGradient>
+            <rect style="stroke: rgb(0,0,0); stroke-width: 5; stroke-dasharray: none; stroke-linecap: square; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; is-custom-font: none; font-file-url: none; fill: url(#SVGID_4); fill-rule: nonzero; opacity: 1;" x="-69.83" y="-49.1375" rx="0" ry="0" width="139.66" height="98.275"/>
+            </g>
+            </g>
+            </g>
+        </svg>
+    </div>
+    <div class="row">
+        <!-- <div class="col-md-3 border-right">
+            <div class="d-flex flex-column align-items-center text-center p-3 py-5">
+                <div class="profile">
+                    <img class="picture" width="150px" [src]="imgSrc">
+                    <input style="display:none" type="file" id="my-file" (change)="onFileSelected($event)">
+                    <button id="upload"><img src="assets\img\upload-icon-31.png" (click)="function()"></button>
+                </div>
+            </div>
+        </div> -->
+        <div class="info">
+            <div class="col-md-5 border-right">
+                <div class="p-3 py-5">
+                    <div class="row mt-3">
+                        <div class="col-md-12"><label class="labels">Username</label><input type="text" class="form-control" placeholder="Username" [(ngModel)]="username" name="username"></div>
+                        <div class="col-md-12"><label class="labels"> Email</label><input type="text" class="form-control" placeholder="Email" [(ngModel)]="email"><span style="color:red" class ="errormessage" *ngIf="visibleEmail"> {{errEmail}} </span></div> 
+                        <div class="col-md-12"><label class="labels"> Old Password</label><input type="password" class="form-control" placeholder="Old Password" [(ngModel)]="old_password"><span style="color:red" class ="errormessage" *ngIf="visibleOldPassword"> Not your old password </span></div> 
+                        <div class="col-md-12"><label class="labels"> Password</label><input type="password" class="form-control" placeholder="Password" [(ngModel)]="password"><span style="color:red" class ="errormessage" *ngIf="visiblePassword"> {{errPassword}} </span></div> 
+                        <div class="col-md-12"><label class="labels"> Confirm Password</label><input type="password" class="form-control" placeholder="Confirm Password" [(ngModel)]="confirm"><span style="color:red" class ="errormessage" *ngIf="visibleConfirmPass"> {{errConfirm}} </span> </div>
+                        <div class="col-md-12"><label class="labels"> Phone Number</label><input type="text" class="form-control" placeholder="Phone Number" [(ngModel)]="number"><span style="color:red" class ="errormessage" *ngIf="visibleNumber"> {{errNumber}} </span> </div>
+                        <div class="col-md-12"><label class="labels"> Address</label><input type="text" class="form-control" placeholder="Your Address" [(ngModel)]="address"></div>
+                        <div class="col-md-12"><label class="labels" id="birth"> Birthdate </label><input type="date" class="form-control" id="birthdate" name="birthdate" [(ngModel)]="birthdate"></div>
+                        <div class="col-md-12"><label class="labels"> Gender </label>
+                        <select id="gender" name="gender" class="form-control"  [(ngModel)]="selectedGender">
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="other">Other</option>
+                        </select></div>
+                    </div>
+                    <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button" id="save" (click)="saveData()">Save Profile</button></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
